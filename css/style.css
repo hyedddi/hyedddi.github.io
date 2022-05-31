@@ -1,0 +1,86 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; cursor: pointer;}
+ul, ol {list-style: none;}
+img {border: none;}
+input {padding: 0; margin: 0;}
+button {cursor: pointer;}
+html, body {width: 100%; height: 100%;}
+
+.m0auto {margin: 0 auto;}
+.mt30 {margin-top: 30px;}
+.mb20 {margin-bottom: 20px;}
+.ft36 {font-size: 36px;}
+.ft20 {font-size: 20px;}
+.ta-c {text-align: center;}
+
+button.btn {margin-top: 15px; background-color: rgb(39, 39, 39); color: #fff; padding: 10px 15px; border-radius: 5px; transition: all 1s; border: none;} 
+button.btn:hover {box-shadow: inset 150px 0px rgb(229, 128, 255); color: #000; border: #fff;}
+
+
+#wrap {width: 100%; height: auto;}
+#wrap section {width: 100%; overflow: hidden;}
+/* sec1 */
+section.sec1 {background: linear-gradient(#4998DC, #4E61C0);}
+.sec1_cont, .sec2_cont {width: 100%;}
+.sec1_sub1, .sec2_sub1, footer {max-width: 1200px; padding-top: 100px;}
+.sec1_sub1 {display: flex; height: 600px;}
+.sec1_txtBox {width: 64%; color: #fff;}
+.sec1_imgBox {width: 36%; overflow: hidden;}
+.sec1_imgBox img {max-width: 460px;}
+.sec1_sub2 {height: 260px; background-color: #fff; padding: 80px 0;}
+.sec1_sub2 > p {line-height: 2.2;}
+.sec1_sub3 {max-width: 1200px; height: 350px; padding-top: 50px; color: #fff;}
+.sec1_sub3 > ul {width: 100%;  display: flex; justify-content: space-evenly; padding: 0 110px;}
+.sec1_sub3 > ul > li {width: 150px;}
+.sec1_sub3 > ul > li > a {display: block; color: #fff;}
+.sec1_sub3 > ul > li > a > img {width: 90px; display: inline-block; padding: 25px; border-radius: 100%; background-color: #fff;}
+.sec1_sub3 h3 {line-height: 2;}
+
+/* sec2 */
+.sec2_sub1 {padding-top: 50px;}
+.sec2_sub1-box {width: 100%; background-color: #fff;}
+.sec2_sub1-box::after {float: none; clear: both; content: ""; display: block;}
+.box {width: 50%; height: 300px; float: left; background-position: -80px; position: relative; border: none; background:  url(/images/portfolio-1.jpg) 0 -87px no-repeat;}
+.box::before {display: block; content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.241); transition: all 0.5s;}
+.box:hover::before {background-color: rgba(0, 0, 0, 0);}
+.box > a {z-index: 9;}
+.box.box2 {background-image: url(/images/portfolio-2.jpg);}
+.box.box3 {background-image: url(/images/portfolio-3.jpg);}
+.box.box4 {background-image: url(/images/portfolio-4.jpg);}
+.box_wrap {width: 100%; height: 100%;transition: all 0.5s; color: #fff;}
+.box:hover .box_wrap {border: 30px solid #fff;}
+.box_wrap > h3 {position: absolute; top: 80px; left: 55px;}
+.box_wrap > span {position: absolute; top: 120px; left: 55px;}
+
+/* 태블릿 */
+@media screen and (max-width: 1200px){
+    /* sec1 */
+    .sec1_sub1, .sec2_sub1, footer {max-width: 90%; padding-top: 80px;}
+    .sec1_txtBox {width: 55%;}
+    .sec1_imgBox {width: 45%; position: relative;}
+    .sec1_imgBox.m0auto {margin: 0 0;}  
+    .sec1_imgBox img {max-width:max-content; width: 100%; position: absolute; bottom: 0;}
+    .sec1_sub3 {max-width: 90%;}
+    .sec1_sub3 > ul {padding: 0 50px;}
+}
+
+/* 모바일 */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    /* sec1 */
+    .sec1_sub1, .sec2_sub1, footer {max-width: 80%; padding-top: 50px;}
+    .sec1_sub1 {display: block; position: relative;}
+    .sec1_txtBox {width: 100%; text-align: center;}
+    .sec1_txtBox > h2 {font-size: 30px;}
+    .sec1_imgBox.m0auto {width: 85%; position: absolute; left:50%; bottom: 0; transform: translateX(-50%);}
+    .sec1_imgBox img {max-width:330px; position: relative; margin: 0 auto; display: block;}
+    .sec1_sub2 {height: auto; padding: 50px 20px;}
+    .sec1_sub3 {height: 550px;}
+    .sec1_sub3 > ul {width: 90%; padding: 0; flex-wrap: wrap; margin: 0 auto; margin-top: 30px;}
+    .sec1_sub3 > ul > li {width: 50%; margin-bottom: 30px;}
+
+    /* sec2 */
+    .box {width: 100%; float: none; clear: both;}
+    .box_wrap {text-align: center;}
+    .box_wrap > h3, .box_wrap > span {position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);}
+    .box_wrap > span {top: 55%;}
+}
